@@ -1,82 +1,227 @@
 /* Global styles */
-:root{
-    --bg:#fff7fb;
-    --card:#ffffff;
-    --muted:#6b7280;
-    --accent:#ffdd57;
-    --accent-2:#f97316;
-    --max-width:1100px;
+
+:root {
+    --bg: #fff7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #ffdd57;
+    --accent-2: #f97316;
+    --max-width: 1100px;
 }
-*{box-sizing:border-box}
-body{
-    margin:0;
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
     font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: linear-gradient(180deg, #fff 0%, #fff7fb 100%);
-    color:#111827;
-    -webkit-font-smoothing:antialiased;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
 }
-.container{
-    max-width:var(--max-width);
-    margin:0 auto;
-    padding:18px;
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 18px;
 }
+
 
 /* Header / Nav */
-.header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-}
-.logo img{max-height:80px; width:auto; display:block; border-radius:6px}
-.nav a{
-    margin-right:16px;
-    color:#111827;
-    font-weight:600;
-    text-decoration:none;
-    padding:6px 8px;
-    border-radius:6px;
-}
-.nav a:hover{background:rgba(0,0,0,0.04)}
 
-.search{display:flex; align-items:center; gap:8px}
-.search input{
-    padding:8px 12px;
-    border-radius:8px;
-    border:1px solid #e6e6e6;
-    font-size:14px;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
-.btn{
-    background:var(--accent);
-    border:none;
-    padding:9px 14px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:700;
+
+.logo img {
+    max-height: 80px;
+    width: auto;
+    display: block;
+    border-radius: 6px
 }
-.btn.secondary{background:transparent; border:1px solid #e5e7eb}
+
+.nav a {
+    margin-right: 16px;
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.nav a:hover {
+    background: rgba(0, 0, 0, 0.04)
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.search input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+.btn {
+    background: var(--accent);
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid #e5e7eb
+}
+
 
 /* Marquee area */
-.marquee{margin-top:16px; background:#fff; padding:10px 12px; border-radius:8px; box-shadow:0 1px 3px rgba(15,23,42,0.06); overflow:hidden}
-marquee{font-weight:700; color:var(--accent-2)}
 
-/* Product layout */
-.products{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-top:22px}
-.product-card{background:var(--card); border-radius:10px; padding:12px; box-shadow:0 6px 18px rgba(15,23,42,0.06); text-align:center; display:flex; flex-direction:column; gap:8px}
-.product-card .im{width:100%; height:220px; object-fit:cover; border-radius:8px}
-.product-card h2{margin:6px 0; font-size:18px; color:#0f172a}
-.product-card .order{margin-top:auto}
-.product-card .order a{display:inline-block; text-decoration:none}
-
-/* Utility */
-.muted{color:var(--muted)}
-
-/* Responsive */
-@media (max-width:720px){
-    .header{flex-direction:column; align-items:flex-start}
-    .logo img{max-height:64px}
-    .nav{display:flex; flex-wrap:wrap; gap:6px}
-    .nav a{margin-right:0}
-    .product-card .im{height:180px}
+.marquee {
+    margin-top: 16px;
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    overflow: hidden
 }
 
+marquee {
+    font-weight: 700;
+    color: var(--accent-2)
+}
+
+
+/* Product layout */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 22px
+}
+
+.product-card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.product-card .im {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px
+}
+
+.product-card h2 {
+    margin: 6px 0;
+    font-size: 18px;
+    color: #0f172a
+}
+
+.product-card .order {
+    margin-top: auto
+}
+
+.product-card .order a {
+    display: inline-block;
+    text-decoration: none
+}
+
+
+/* Utility */
+
+.muted {
+    color: var(--muted)
+}
+
+
+/* Responsive */
+
+@media (max-width:720px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start
+    }
+    .logo img {
+        max-height: 64px
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px
+    }
+    .nav a {
+        margin-right: 0
+    }
+    .product-card .im {
+        height: 180px
+    }
+}
+
+
+/* Hero banner */
+
+.hero {
+    position: relative;
+    margin-top: 18px
+}
+
+.hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block
+}
+
+.hero-text {
+    position: absolute;
+    left: 28px;
+    top: 34%;
+    color: #fff;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45)
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 36px
+}
+
+.hero-text p {
+    margin: 6px 0 0 0;
+    color: rgba(255, 255, 255, 0.95)
+}
+
+
+/* Footer */
+
+.site-footer {
+    margin-top: 28px;
+    text-align: center;
+    padding: 18px 0;
+    color: var(--muted);
+    font-size: 14px
+}
+
+/* Text brand and gradient hero */
+.brand{font-size:22px; color:var(--accent-2); background:linear-gradient(90deg,#f97316,#fb923c); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero-gradient{width:100%; height:300px; border-radius:10px; display:flex; align-items:center; padding-left:28px; background:linear-gradient(135deg,#fb7185 0%, #f97316 100%); color:#fff}
+.hero-gradient .hero-text h1{font-size:32px}
+.hero-gradient .hero-text p{opacity:0.95}
