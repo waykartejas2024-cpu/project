@@ -1,0 +1,31 @@
+h1 {
+    background-color: rgb(186, 130, 18);
+    font-style: unset;
+}
+
+h3 {
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    font-style: initial;
+    background: #a16300a8;
+}
+
+p {
+    font-size: normal;
+    background: #fdfffb;
+}
+
+h2 {
+    background-color: beige;
+}
+
+.div1 {
+    text-align: left;
+}
+
+.div2 {
+    text-align: center;
+}
+
+.div3 {
+    text-align: right;
+}

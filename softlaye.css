@@ -1,0 +1,27 @@
+marquee {
+    background-color: rgb(253, 253, 253);
+    text-shadow: chartreuse;
+}
+
+div {
+    float: left;
+}
+
+a {
+    margin-right: 160px;
+    color: rgb(90, 71, 71);
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(255, 239, 17);
+}
+
+input {
+    font-size: 15px;
+}
+
+.im {
+    padding-right: 25PX;
+    margin-right: 110px;
+}
