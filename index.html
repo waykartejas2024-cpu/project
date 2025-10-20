@@ -17,7 +17,7 @@
             </div>
             <nav class="nav" aria-label="Main navigation">
                 <a href="softlayer.html">SOFTLAYER</a>
-                <a href="softlayer.html">HOME</a>
+                <a href="#" id="home-link">HOME</a>
                 <a href="softlayer.html">KIDS</a>
                 <a href="softlayer.html">SHIRT</a>
                 <a href="softlayer.html">JEANS</a>
@@ -42,31 +42,41 @@
         <section class="products" aria-label="Products">
             <article class="product-card">
                 <img class="im" src="./images/shirt2.jpeg" alt="shirt2">
-                <h2>PRICE = 999</h2>
+                <h3 class="product-title">Classic Cotton Shirt</h3>
+                <p class="product-desc muted">Soft, breathable cotton — perfect for everyday wear.</p>
+                <div class="price">₹999</div>
                 <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
             </article>
 
             <article class="product-card">
                 <img class="im" src="./images/shirt4.jpeg" alt="shirt4">
-                <h2>PRICE = 999</h2>
+                <h3 class="product-title">Denim Casual Shirt</h3>
+                <p class="product-desc muted">Lightweight denim finish with a relaxed fit.</p>
+                <div class="price">₹999</div>
                 <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
             </article>
 
             <article class="product-card">
                 <img class="im" src="./images/shirt3.jpeg" alt="shirt3">
-                <h2>PRICE = 999</h2>
+                <h3 class="product-title">Striped Polo</h3>
+                <p class="product-desc muted">Smart-casual polo with striped detail at the collar.</p>
+                <div class="price">₹999</div>
                 <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
             </article>
 
             <article class="product-card">
                 <img class="im" src="./images/shirt5.jpeg" alt="shirt5">
-                <h2>PRICE = 999</h2>
+                <h3 class="product-title">Linen Summer Shirt</h3>
+                <p class="product-desc muted">Breathable linen blend — stay cool on warm days.</p>
+                <div class="price">₹999</div>
                 <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
             </article>
 
             <article class="product-card">
                 <img class="im" src="./images/shirt1.jpeg" alt="shirt1">
-                <h2>PRICE = 999</h2>
+                <h3 class="product-title">Slim Fit Formal</h3>
+                <p class="product-desc muted">Crisp look for formal and semi-formal occasions.</p>
+                <div class="price">₹999</div>
                 <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
             </article>
         </section>
@@ -74,6 +84,13 @@
     <footer class="site-footer">
         © 2025 Softlayer — Built with care. Replace images in the `images/` folder to personalize.
     </footer>
+    <script>
+        // Make HOME refresh the page
+        document.getElementById('home-link') ? .addEventListener('click', function(e) {
+            e.preventDefault();
+            location.reload();
+        });
+    </script>
 </body>
 
 </html>
