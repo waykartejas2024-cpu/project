@@ -9,68 +9,70 @@
 </head>
 
 <body bgcolor="pink">
-    <!-- replace these images in /images with your own files before deploying -->
-    <img src="./images/softlayer.png" alt="softlayer" width="1400" height="300">
-    <br><br>
-    <div>
-        <a href="softlayer.html">SOFTLAYER</a>
-        <a href="softlayer.html">HOME  </a>
-        <a href="softlayer.html">KID'S </a>
-        <a href="softlayer.html">SHIRT </a>
-        <a href="softlayer.html">JEANS </a>
-        <input type="text" value="search in softlayer">
-        <button> SEARCH</button>
-
+    <!-- Header -->
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="./images/softlayer.png" alt="softlayer">
+            </div>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="softlayer.html">SOFTLAYER</a>
+                <a href="softlayer.html">HOME</a>
+                <a href="softlayer.html">KIDS</a>
+                <a href="softlayer.html">SHIRT</a>
+                <a href="softlayer.html">JEANS</a>
+            </nav>
+            <div class="search">
+                <input type="text" value="search in softlayer" aria-label="Search">
+                <button class="btn">SEARCH</button>
+            </div>
+        </header>
     </div>
-    <br>
-    <br>
-    <marquee behavior="left" direction="left">
-        <h1> <pre> SOFTLAYER           SOFTLAYER           SOFTLYYER           SOFTLAYER           SOFTLYYER         SOFTLAYER           SOFTLYYER           SOFTLAYER          SOFTLYYER           SOFTLAYER          SOFTLYYER           SOFTLAYER           SOFTLYYER </pre></h1>
-    </marquee>
-    <br>
-    <br>
+    <!-- Hero -->
+    <div class="container">
+        <section class="hero">
+            <img class="hero-img" src="./images/softlayer.png" alt="softlayer banner">
+            <div class="hero-text">
+                <h1>Welcome to Softlayer</h1>
+                <p class="muted">Quality shirts at friendly prices — shop our latest collection.</p>
+            </div>
+        </section>
 
-    <div>
-        <div>
-            <img class="im" src="./images/shirt2.jpeg" alt="shirt2" width="200" height="250">
-            <H2>PRICE=999</H2>
-            <a href="softlayer2.html">
-                <h3>ORDER NOW</h3>
-            </a>
-        </div>
-        <div>
-            <img class="im" src="./images/shirt4.jpeg" alt="shirt4" width="200" height="250">
-            <H2>PRICE=999</H2>
-            <a href="softlayer2.html">
-                <h3>ORDER NOW</h3>
-            </a>
-        </div>
+        <section class="products" aria-label="Products">
+            <article class="product-card">
+                <img class="im" src="./images/shirt2.jpeg" alt="shirt2">
+                <h2>PRICE = 999</h2>
+                <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
+            </article>
 
+            <article class="product-card">
+                <img class="im" src="./images/shirt4.jpeg" alt="shirt4">
+                <h2>PRICE = 999</h2>
+                <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
+            </article>
 
-        <div>
-            <img class="im" src="./images/shirt3.jpeg" alt="shirt3" width="200" height="250">
-            <H2>PRICE=999</H2>
-            <a href="softlayer2.html">
-                <h3>ORDER NOW</h3>
-            </a>
-        </div>
+            <article class="product-card">
+                <img class="im" src="./images/shirt3.jpeg" alt="shirt3">
+                <h2>PRICE = 999</h2>
+                <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
+            </article>
 
+            <article class="product-card">
+                <img class="im" src="./images/shirt5.jpeg" alt="shirt5">
+                <h2>PRICE = 999</h2>
+                <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
+            </article>
 
-        <div>
-            <img class="im" src="./images/shirt5.jpeg" alt="shirt5" width="200" height="250">
-            <H2>PRICE=999</H2>
-            <a href="softlayer2.html">
-                <h3>ORDER NOW</h3>
-            </a>
-        </div>
-
-        <img class="im" src="./images/shirt1.jpeg" alt="shirt1" width="200" height="250">
-        <H2>PRICE=999</H2>
-        <a href="softlayer2.html">
-            <h3>ORDER NOW</h3>
-        </a>
+            <article class="product-card">
+                <img class="im" src="./images/shirt1.jpeg" alt="shirt1">
+                <h2>PRICE = 999</h2>
+                <div class="order"><a class="btn" href="softlayer2.html">ORDER NOW</a></div>
+            </article>
+        </section>
     </div>
-
+    <footer class="site-footer">
+        © 2025 Softlayer — Built with care. Replace images in the `images/` folder to personalize.
+    </footer>
 </body>
 
 </html>
