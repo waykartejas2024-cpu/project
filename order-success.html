@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order Successful</title>
+  <link rel="stylesheet" href="order-success.css" />
+</head>
+
+<body>
+  <main class="success-page">
+    <div class="card">
+      <div class="icon-wrap">
+        <!-- simple checkmark SVG -->
+        <svg class="check" viewBox="0 0 52 52" aria-hidden="true">
+          <circle cx="26" cy="26" r="25" fill="none" />
+          <path d="M14 27 L22 34 L38 16" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <h1>Order Confirmed</h1>
+      <p class="lead">Thanks — your order was placed successfully.</p>
+
+      <div class="summary">
+        <dl>
+          <div class="row"><dt>Order #</dt><dd id="order-id">—</dd></div>
+          <div class="row"><dt>Item</dt><dd id="order-item">—</dd></div>
+          <div class="row"><dt>Total</dt><dd id="order-total">—</dd></div>
+          <div class="row"><dt>Date</dt><dd id="order-date">—</dd></div>
+        </dl>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="index.html">Back to Home</a>
+        <a class="btn" href="#" id="view-order">View Order</a>
+        <button class="btn outline" id="print-btn">Print Receipt</button>
+      </div>
+
+      <p class="note">You will also receive a confirmation email shortly (if provided).</p>
+    </div>
+  </main>
+
+  <script>
+    // Small helper: read query params and populate fields
+    function getQuery() {
+      return Object.fromEntries(new URLSearchParams(location.search).entries());
+    }
+
+    (function populate() {
+      const q = getQuery();
+      const id = q.orderId || ('ORD' + Date.now().toString().slice(-6));
+      const item = q.item || '—';
+      const total = q.total ? (q.total[0] === '$' ? q.total : '$' + q.total) : '—';
+      const date = new Date().toLocaleString();
+
+      document.getElementById('order-id').textContent = id;
+      document.getElementById('order-item').textContent = item;
+      document.getElementById('order-total').textContent = total;
+      document.getElementById('order-date').textContent = date;
+
+      // view-order could point to an order details page if available
+      const view = document.getElementById('view-order');
+      view.href = q.orderUrl || '#';
+      if (view.href === '#') view.style.opacity = '0.7';
+
+      document.getElementById('print-btn').addEventListener('click', function () { window.print(); });
+    })();
+  </script>
+</body>
+
+</html>
