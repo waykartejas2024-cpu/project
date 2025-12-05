@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Order</title>
     <style>
-            body {
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background: honeydew;
+            margin: 0;
+            padding: 20px;
+            color: #111
+        }
+        
+        .container {
             font-family: Segoe UI, Arial, sans-serif;
             background: #fff8f9;
             margin: 0;
@@ -16,145 +24,151 @@
         }
         
         .container {
-            <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Place Order</title><style>body {
-                font-family: Segoe UI, Arial, sans-serif;
-                background: #fff8f9;
-                margin: 0;
-                padding: 20px;
-                color: #111
-            }
-            .container {
-                max-width: 760px;
-                margin: 24px auto;
-                background: #fff;
-                border-radius: 10px;
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-                padding: 20px
-            }
-            h1 {
-                margin: 0 0 12px
-            }
+            max-width: 760px;
+            margin: 24px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+            padding: 20px
+        }
+        
+        h1 {
+            margin: 0 0 12px
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+        
+        label {
+            font-size: 13px;
+            color: #333
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #e6e6e6;
+            font-size: 14px
+        }
+        
+        textarea {
+            resize: vertical
+        }
+        
+        .full {
+            grid-column: 1/ -1
+        }
+        
+        .actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 12px
+        }
+        
+        .btn {
+            background: #f92c93;
+            color: white;
+            padding: 10px 14px;
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer
+        }
+        
+        .note {
+            font-size: 13px;
+            color: #555
+        }
+        
+        .summary {
+            background: #fff4f8;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #fee;
+        }
+        
+        .error {
+            color: #b00020;
+            font-size: 13px
+        }
+        
+        @media (max-width:640px) {
             form {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 12px
+                grid-template-columns: 1fr
             }
-            label {
-                font-size: 13px;
-                color: #333
-            }
-            input,
-            select,
-            textarea {
-                width: 100%;
-                padding: 10px;
-                border-radius: 8px;
-                border: 1px solid #e6e6e6;
-                font-size: 14px
-            }
-            textarea {
-                resize: vertical
-            }
-            .full {
-                grid-column: 1/ -1
-            }
-            .actions {
-                display: flex;
-                gap: 12px;
-                align-items: center;
-                margin-top: 12px
-            }
-            .btn {
-                background: #d63384;
-                color: white;
-                padding: 10px 14px;
-                border: 0;
-                border-radius: 8px;
-                cursor: pointer
-            }
-            .note {
-                font-size: 13px;
-                color: #555
-            }
-            .summary {
-                background: #fff4f8;
-                padding: 12px;
-                border-radius: 8px;
-                border: 1px solid #fee;
-            }
-            .error {
-                color: #b00020;
-                font-size: 13px
-            }
-            @media (max-width:640px) {
-                form {
-                    grid-template-columns: 1fr
-                }
-            }
+        }
     </style>
 </head>
 
 <body>
-    <center>
     <div class="container">
         <h1>Order Now</h1>
         <p class="note">Please fill your details. Payment method: <strong>Cash on Delivery (COD)</strong>.</p>
-
+        <br>
         <form id="orderForm" novalidate>
             <div>
                 <label for="name">Full name *</label>
                 <input id="name" name="name" type="text" required placeholder="Your full name">
             </div>
 
-
+            <br>
             <div>
                 <h1></h1>
                 <label for="phone">Phone number *</label>
                 <input id="phone" name="phone" type="tel" required placeholder="+91 98765*****">
             </div>
-
+            <br>
             <div>
                 <label for="email">Email (optional)</label>
                 <input id="email" name="email" type="email" placeholder="you@example.com">
             </div>
-
+            <br>
             <div>
                 <label for="quantity">Quantity *</label>
                 <input id="quantity" name="quantity" type="number" min="1" value="1" required>
             </div>
-
+            <br>
             <div class="full">
                 <label for="address">Address *</label>
                 <textarea id="address" name="address" rows="3" required placeholder="House number, street, landmark"></textarea>
             </div>
-
+            <br>
             <div>
                 <label for="city">City *</label>
                 <input id="city" name="city" type="text" required>
             </div>
 
+            <br>
             <div>
                 <label for="pincode">Pin / Postal code *</label>
                 <input id="pincode" name="pincode" type="text" required>
             </div>
 
+            <br>
             <div>
                 <label for="item">Item name *</label>
                 <input id="item" name="item" type="text" required value="Classic Cotton Shirt">
             </div>
 
+            <br>
             <div>
                 <label for="price">Price (per unit, ₹) *</label>
                 <input id="price" name="price" type="number" min="0" required value="699">
             </div>
-
+            <br>
             <div class="full">
                 <label>Payment method</label>
                 <div class="summary">Cash on Delivery (COD)</div>
             </div>
-
+            <br>
             <div id="error" class="error full" role="alert" style="display:none"></div>
-
+            <br>
             <div class="actions full">
                 <button type="submit" class="btn">Place Order (COD)</button>
                 <button type="button" id="clearBtn" class="btn" style="background:#888">Clear</button>
@@ -273,7 +287,6 @@
             clearError();
         });
     </script>
-        </center>
 </body>
 
 </html>
